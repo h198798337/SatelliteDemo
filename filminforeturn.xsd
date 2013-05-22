@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="dcp_list"/>
+      </xs:sequence>
+      <xs:attribute name="status" use="required" type="xs:NCName"/>
+      <xs:attribute name="version" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dcp_list">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="dcp"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dcp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="uuid"/>
+        <xs:element ref="issueDate"/>
+        <xs:element ref="issuer"/>
+        <xs:element ref="creator"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uuid" type="xs:anyURI"/>
+  <xs:element name="issueDate" type="xs:NMTOKEN"/>
+  <xs:element name="issuer" type="xs:NCName"/>
+  <xs:element name="creator" type="xs:string"/>
+</xs:schema>

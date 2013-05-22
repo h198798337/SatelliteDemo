@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response status="asd">
+	<success>asd</success>
+	<cpluuid>adsf</cpluuid>
+	<asset_type>PKL</asset_type>
+	<source>ftp://192.168.1.10/films/</source>
+	<username>test</username>
+	<password>8888sdf</password>
+	<path>houwangchushi/houwangchushi.pkl.xml</path>
+</response>

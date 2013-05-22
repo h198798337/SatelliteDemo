@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="success"/>
+        <xs:element ref="cpluuid"/>
+        <xs:element ref="asset_type"/>
+        <xs:element ref="source"/>
+        <xs:element ref="username"/>
+        <xs:element ref="password"/>
+        <xs:element ref="path"/>
+      </xs:sequence>
+      <xs:attribute name="status" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="success" type="xs:NCName"/>
+  <xs:element name="cpluuid" type="xs:NCName"/>
+  <xs:element name="asset_type" type="xs:NCName"/>
+  <xs:element name="source" type="xs:anyURI"/>
+  <xs:element name="username" type="xs:NCName"/>
+  <xs:element name="password" type="xs:NMTOKEN"/>
+  <xs:element name="path" type="xs:string"/>
+</xs:schema>

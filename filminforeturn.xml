@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<response status="asd" version="asd">
+	<dcp_list>
+		<dcp>
+			<uuid>urn:uuid:87d8773e-8bbf-11de-adb4-5232d2a4a49a</uuid>
+			<issueDate>2010-11-02T16:39:22-00:00</issueDate>
+			<issuer>HuaLong</issuer>
+			<creator>DCP creator v1.0</creator>
+		</dcp>
+		<dcp>
+			<uuid>urn:uuid:87d8773e-8bbf-11de-adb4-5232d2a4a49a</uuid>
+			<issueDate>2010-11-02T16:39:22-00:00</issueDate>
+			<issuer>HuaLong</issuer>
+			<creator>DCP creator v1.0</creator>
+		</dcp>
+	</dcp_list>
+</response>
