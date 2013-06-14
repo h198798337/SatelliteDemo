@@ -27,9 +27,9 @@ public class CMDFTPRequest extends CrifstSatelliteDeviceCMD<String>{
 		byte[] cmd = new byte[11 + xmlb.length];
 		String lengthS = Integer.toHexString(11 + xmlb.length);
 		lengthS = addZeroForNum(lengthS, 8, true);//补零
-		lengthS = hexTran(lengthS);//高低位调转
+//		lengthS = hexTran(lengthS);//高低位调转
 		byte[] length = hexStringToBytes(lengthS);
-		System.arraycopy(new byte[]{0x55, 0x24, 0x00}, 0, temp, 0, 3);
+		System.arraycopy(new byte[]{0x55, 0x00, 0x24}, 0, temp, 0, 3);
 		System.arraycopy(length, 0, temp, 3, 4);
 		System.arraycopy(xmlb, 0, temp, 7, xmlb.length);
 		//生成校验和
@@ -58,7 +58,7 @@ public class CMDFTPRequest extends CrifstSatelliteDeviceCMD<String>{
 		// TODO Auto-generated method stub
 		byte[] cmd = new byte[2];
 		System.arraycopy(value, 1, cmd, 0, 2);
-		byte[] requestSuccess = new byte[]{0x25,0x00};
+		byte[] requestSuccess = new byte[]{0x00, 0x25};
 		if(Arrays.equals(cmd, requestSuccess)){
 			setPayloadLength(value);
 			byte[] temp = new byte[payloadLength];

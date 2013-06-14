@@ -13,7 +13,8 @@ public abstract class CrifstSatelliteDeviceCMD<T> extends AbstractTCPCmd<T>{
 	protected void setPayloadLength(byte[] value) {
 		byte[] payloadLengthByte = new byte[4];
 		System.arraycopy(value, 3, payloadLengthByte, 0, 4);
-		payloadLength = Integer.parseInt(hexTran(byte2HexStr(payloadLengthByte, "")), 16);
+//		payloadLength = Integer.parseInt(hexTran(byte2HexStr(payloadLengthByte, "")), 16);
+		payloadLength = Integer.parseInt(byte2HexStr(payloadLengthByte, ""), 16);
 	}
 	
 	public String getStatus() {

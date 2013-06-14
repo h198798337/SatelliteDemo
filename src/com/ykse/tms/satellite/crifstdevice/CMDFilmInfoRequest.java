@@ -35,7 +35,7 @@ public class CMDFilmInfoRequest extends CrifstSatelliteDeviceCMD<String>{
 		// TODO Auto-generated method stub
 		byte[] cmd = new byte[2];
 		System.arraycopy(value, 1, cmd, 0, 2);
-		byte[] requestSuccess = new byte[]{0x22,0x00};
+		byte[] requestSuccess = new byte[]{0x00, 0x22};
 		if(Arrays.equals(cmd, requestSuccess)){
 			setPayloadLength(value);
 			byte[] temp = new byte[payloadLength];
