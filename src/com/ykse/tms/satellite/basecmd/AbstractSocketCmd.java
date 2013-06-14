@@ -212,4 +212,18 @@ public abstract class AbstractSocketCmd<T, S extends SocketConnect> {
 	protected int hexToLength(String hexstr){
         return Integer.parseInt(hexTran(hexstr),16);
     }
+	
+	/**
+	 * @param content
+	 * @param number 校验和字符串长度
+	 * @return
+	 */
+	protected byte[] checkSum(byte[] content, int number) {
+		long sum = 0L;
+		for (byte b : content) {
+			sum += b;
+		}
+		String checkSumStr = addZeroForNum(Long.toHexString(sum), number, true);
+		return hexStringToBytes(checkSumStr);
+	}
 }
